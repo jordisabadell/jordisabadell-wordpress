@@ -23,7 +23,7 @@ else
         echo "Uploading $f"
 		if [ "$f" != ".travis.yml" ] && [ "$f" != "deploy.sh" ]
 		then
-	 		curl --ftp-create-dirs -T $f -u $SFTP_USER:$SFTP_PASS ftp://ftp.kilometresolidari.cat/public_html/$f
+	 		curl --ftp-create-dirs -T $f -u $SFTP_USER:$SFTP_PASSWORD ftp://ftp.kilometresolidari.cat/public_html/$f
 		fi
 	done
 fi
