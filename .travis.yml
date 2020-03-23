@@ -9,7 +9,7 @@ before_script:
 script:
     - npm --v
 after_success:
-    "curl -T README.md -u $SFTP_USER:$SFTP_PASSWORD ftp://ftp.kilometresolidari.cat/public_html/"
+    - find . -type d \( -path "./.*" -o -path "./node_modules" \) -prune -o -name "*" -print -exec curl --ftp-create-dirs -T {} ftp://ftp.kilometresolidari.cat/public_html/ --user ${SFTP_USER}:${SFTP_PASSWORD} \;
 notifications:
   email: jordisabadell@gmail.com
   on_failure: always
