@@ -7,7 +7,7 @@ cd wordpress
 echo ''  > docker-compose.yml
 ```
 
-Editar l'arxiu de configuració.
+Copiar l'arxiu de configuració de Docker Compose.
 ```
 Fer un copy-paste de l'arxiu docker-compose.yml
 ```
