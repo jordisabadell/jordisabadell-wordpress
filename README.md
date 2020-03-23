@@ -17,7 +17,6 @@ Iniciar l'entorn.
 docker-compose up -d
 ```
 
-
 ## Comandes bàsiques Docker 
 Per executar les comandes en entorn Window usar **PowerShell**.
 
