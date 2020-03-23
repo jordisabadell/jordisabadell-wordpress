@@ -9,7 +9,7 @@ before_script:
 script:
     - npm --v
 after_success:
-    - curl --ftp-create-dirs -T uploadfilename -u $FTP_USER:$FTP_PASSWORD ftp://ftp.kilometresolidari.cat/public_html
+    - curl --ftp-create-dirs -T README.md -u $FTP_USER:$FTP_PASSWORD ftp://ftp.kilometresolidari.cat/public_html
 notifications:
   email: jordisabadell@gmail.com
   on_failure: always
