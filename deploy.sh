@@ -1,4 +1,6 @@
 #!/bin/bash
+echo "Executing deploy.sh"
+
 gitLastCommit=$(git show --summary --grep="Merge pull request")
 if [[ -z "$gitLastCommit" ]]
 then
@@ -10,7 +12,7 @@ else
 	#the 5th element in the array is the commit ID we need. If git log changes, this breaks. :(
 	lastCommit=${arr[4]}
 fi
-echo $lastCommit
+echo "Last commit" $lastCommit
 
 filesChanged=$(git diff-tree --no-commit-id --name-only -r $lastCommit)
 if [ ${#filesChanged[@]} -eq 0 ]; then
@@ -18,11 +20,10 @@ if [ ${#filesChanged[@]} -eq 0 ]; then
 else
     for f in $filesChanged
 	do
-		#do not upload these files that aren't necessary to the site
-		if [ "$f" != ".travis.yml" ] && [ "$f" != "deploy.sh" ] && [ "$f" != "test.js" ] && [ "$f" != "package.json" ]
+		if [ "$f" != ".travis.yml" ] && [ "$f" != "deploy.sh" ]
 		then
 	 		echo "Uploading $f"
-	 		curl --ftp-create-dirs -T $f -u $FTP_USER:$FTP_PASS ftp://bourbonpursuit.com/$f
+	 		curl --ftp-create-dirs -T $f -u $SFTP_USER:$SFTP_PASS ftp://ftp.kilometresolidari.cat/public_html/$f
 		fi
 	done
 fi
