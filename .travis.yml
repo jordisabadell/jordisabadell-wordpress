@@ -1,0 +1,15 @@
+#.travis.yml
+language: node_js
+node_js:
+  - "12.16.1"
+branches:
+only:
+  - master
+before_script:
+script:
+after_success:
+    - find . -type d \( -path "./.*" -o -path "./node_modules" \) -prune -o -name "*" -print -exec curl --ftp-create-dirs -T {} ftp://ftp.kilometresolidari.cat/public_html/ --user ${SFTP_USER}:${SFTP_PASSWORD} \;
+notifications:
+  email: jordisabadell@gmail.com
+  on_failure: always
+  on_success: always
