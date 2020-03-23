@@ -21,9 +21,6 @@ else
     for f in $filesChanged
 	do
         echo "Uploading $f"
-		if [ "$f" != ".travis.yml" ] && [ "$f" != "deploy.sh" ]
-		then
-	 		curl --ftp-create-dirs -T $f -u $SFTP_USER:$SFTP_PASSWORD ftp://ftp.kilometresolidari.cat/public_html/$f
-		fi
+		curl --ftp-create-dirs -T $f -u $SFTP_USER:$SFTP_PASSWORD ftp://ftp.kilometresolidari.cat/public_html/$f
 	done
 fi
