@@ -1,3 +1,8 @@
+#Jordi Sabadell Wordpress
+**A web of Jordi Sabadell Project** :rocket:  
+http://www.jordisabadell.com
+
+
 ## Configuració entorn de treball
 
 Crear el directori arrel i l'arxiu de configuració de Docker Compose.
