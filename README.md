@@ -1,6 +1,8 @@
-#Jordi Sabadell Wordpress
+# Jordi Sabadell Wordpress
 **A web of Jordi Sabadell Project** :rocket:  
-http://www.jordisabadell.com
+https://www.jordisabadell.com
+
+![Image description](docs/architecture-diagram.png)
 
 
 ## Configuració entorn de treball
