@@ -6,13 +6,23 @@ https://www.jordisabadell.com
 
 ![Image description](docs/architecture-diagram.png)
 
+## Challanges
+
+- [x] Configured local Wordpress and MySQL environment with Docker
+- [ ] Install multisite / multilanguage Wordpress (2 sites: Jordi Sabadell and Kilòmetre Solidari)
+- [ ] Install basic plugins (Akismet, Yoast, JSON API, etc)
+- [ ] Install new theme for Jordi Sabadell Blog
+- [ ] Create a Wordpress Custom Post Type and expose to JSON API
+- [ ] Add Static Site Generator for WordPress for Serverless deploy
+- [ ] Create a CI/CD environment
+
 
 ## Configuració entorn de treball
 
 Crear el directori arrel i l'arxiu de configuració de Docker Compose.
 ```
-mkdir worpdress  
-cd wordpress
+mkdir jordisabadell-wordpress
+cd jordisabadell-wordpress
 echo ''  > docker-compose.yml
 ```
 
