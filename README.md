@@ -2,10 +2,6 @@
 **A web of Jordi Sabadell Project** :rocket:  
 https://www.jordisabadell.com
 
-## Architecture diagram
-
-![Image description](docs/architecture-diagram.png)
-
 ## Challanges
 
 - [x] Configured local Wordpress and MySQL environment with Docker
@@ -14,7 +10,11 @@ https://www.jordisabadell.com
 - [ ] Install new theme for Jordi Sabadell Blog
 - [ ] Create a Wordpress Custom Post Type and expose to JSON API
 - [ ] Add Static Site Generator for WordPress for Serverless deploy
-- [ ] Create a CI/CD environment
+- [ ] Create a CI/CD environment (development-production life cycle)
+
+## Architecture diagram
+
+![Image description](docs/architecture-diagram.png)
 
 
 ## Configuració entorn de treball
