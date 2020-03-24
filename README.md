@@ -12,9 +12,9 @@ cd wordpress
 echo ''  > docker-compose.yml
 ```
 
-Editar l'arxiu de configuració.
+Copiar l'arxiu de configuració de Docker Compose.
 ```
-Fer un copy-paste de l'arxiu docker-compose.yml (https://github.com/jordisabadell/kilometresolidari-wordpress-docker/blob/master/docker-compose.yml)
+Fer un copy-paste de l'arxiu docker-compose.yml
 ```
 
 Iniciar l'entorn.
