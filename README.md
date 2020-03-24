@@ -2,6 +2,8 @@
 **A web of Jordi Sabadell Project** :rocket:  
 https://www.jordisabadell.com
 
+## Architecture diagram
+
 ![Image description](docs/architecture-diagram.png)
 
 
