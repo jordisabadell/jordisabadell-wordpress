@@ -7,7 +7,7 @@ This static web has been created from the following challenges.
 
 - [x] Configure Wordpress/MySQL local environment with Docker.
 - [ ] Install multisite / multilanguage Wordpress (2 sites: Jordi Sabadell and Kilòmetre Solidari).
-- [ ] Install basic plugins (Akismet, Yoast, JSON API, etc).
+- [ ] Install basic plugins (Akismet, Yoast, etc).
 - [ ] Install new theme for Jordi Sabadell Blog.
 - [ ] Create a Wordpress Custom Post Type and expose to JSON API.
 - [ ] Add Static Site Generator for WordPress for Serverless deploy.
@@ -16,6 +16,10 @@ This static web has been created from the following challenges.
 ## Architecture diagram
 
 ![Image description](docs/architecture-diagram.png)
+
+## Wordpress plugins
+
+- Akismed (https://akismet.com/)
 
 
 ## Configuració entorn de treball
