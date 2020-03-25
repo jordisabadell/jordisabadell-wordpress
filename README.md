@@ -3,14 +3,15 @@
 https://www.jordisabadell.com
 
 ## Challanges
+This static web has been created from the following challenges.
 
-- [x] Configured local Wordpress and MySQL environment with Docker
-- [ ] Install multisite / multilanguage Wordpress (2 sites: Jordi Sabadell and Kilòmetre Solidari)
-- [ ] Install basic plugins (Akismet, Yoast, JSON API, etc)
-- [ ] Install new theme for Jordi Sabadell Blog
-- [ ] Create a Wordpress Custom Post Type and expose to JSON API
-- [ ] Add Static Site Generator for WordPress for Serverless deploy
-- [ ] Create a CI/CD environment (development-production life cycle)
+- [x] Configure Wordpress/MySQL local environment with Docker.
+- [ ] Install multisite / multilanguage Wordpress (2 sites: Jordi Sabadell and Kilòmetre Solidari).
+- [ ] Install basic plugins (Akismet, Yoast, JSON API, etc).
+- [ ] Install new theme for Jordi Sabadell Blog.
+- [ ] Create a Wordpress Custom Post Type and expose to JSON API.
+- [ ] Add Static Site Generator for WordPress for Serverless deploy.
+- [ ] Create a CI/CD environment (development-production life cycle).
 
 ## Architecture diagram
 
