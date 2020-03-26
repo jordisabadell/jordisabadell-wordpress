@@ -1,4 +1,10 @@
 <?php
+
+// BEGIN iThemes Security - Do not modify or remove this line
+// iThemes Security Config Details: 2
+define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settings > WordPress Tweaks > File Editor
+// END iThemes Security - Do not modify or remove this line
+
 /**
  * The base configuration for WordPress
  *
@@ -29,7 +35,7 @@ define( 'DB_USER', '${DB_USER}' );
 define( 'DB_PASSWORD', '${DB_PASSWORD}' );
 
 /** MySQL hostname */
-define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', '${DB_HOST}' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -46,14 +52,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'dEP^./$$`2xF7e:b&0JKr:8B7#iclK~#k$r8IwX,4]U6p{%c^)@,m! `H6+d.m5d' );
-define( 'SECURE_AUTH_KEY',  'a`/ZsGd;#9O%pTKTBU$l?pJeC:{d:B[Q&Ny30.R7btS2D{nbg =3ax&#PG1Vh)F[' );
-define( 'LOGGED_IN_KEY',    'Y(FCu[nq^jEzg=R>e4:Q9s)uBrd[Jp~[u:9/@!.wGaX:F}1P>rF})~DSycXsGux$' );
-define( 'NONCE_KEY',        '{)ard..!qno=hCA]$e/C;M0XegHfzN:`m=,Hq5<ie|]7nzURCgAXkB@:(CueSl/Y' );
-define( 'AUTH_SALT',        '%IraD;y%@ f5G@.*:(UCaJ?!Gw@j8wnZNYWTVVb3PkV#W{;}^mq;^9;2Qw9sj8LH' );
-define( 'SECURE_AUTH_SALT', '}$.z_P2|txY9JTtyn*X#{]Xb-jtZwlg3]j$ ygx^tWZtP9LR4p)B4T*/[<UljiGy' );
-define( 'LOGGED_IN_SALT',   'B<|L?U<v+)?G@/:npQd^+WwZzV}m6@R4X<1^@gL7+T{pwiX(0eD*V$#)r2Qas{Tm' );
-define( 'NONCE_SALT',       '>hVT>f]hJAwTOpXyV*haJ&[syP>vMom8$O39Vpx[<NWS$+hZTR(Lu}vwC8jO?.xQ' );
+define( 'AUTH_KEY',         'IkNc{er&*P!+f1%x5:uh]4SIoi;Klo!luc pbN>p!;_kuw=bh<C?>G/0NL=/7z?S' );
+define( 'SECURE_AUTH_KEY',  'zfx{)iG!+QamsgQ#{-cjar[5F1jYz+p.A`=0*{>8$vx59X=>D[IR(.5DlvY}]2Sl' );
+define( 'LOGGED_IN_KEY',    '}KSE6`{L]R[0nRAHn +z2V-7+D^PCns<DU)7y*.(!% tAR&2Pl6=:~zu1}696+hf' );
+define( 'NONCE_KEY',        '}i!pgkm#p.Tt@no.)isk;GoPQ(h/6y3ot)R6m:<4rDO1oB0Dc| L$+Y(;B]R:M;J' );
+define( 'AUTH_SALT',        'L-?IBPQ0P-7zP7$T!DE</JVd.i8q 51ISl([er*9%a4zw/~YOS]r8N(~8T(C>&so' );
+define( 'SECURE_AUTH_SALT', '9WC#_AL1FDFx``,^t6V*-_m@vcG3sV!l[&2!^G<pUZ12lAgfm,$|:;x;f:ou7(@:' );
+define( 'LOGGED_IN_SALT',   'qw!Mwz/P+~0d]DbaDb`~LBOHXC^v]t(PaKdYV`A8yGzZqJEC[>C:66Jso6Rr+W%-' );
+define( 'NONCE_SALT',       '2u ;PyL`27j<F?v!41Z#(5gP&nti$~Xp&gWNs^6hkC,pUs,A>C9SRux=94Z8^BbZ' );
 
 /**#@-*/
 
@@ -79,6 +85,7 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', false );
 
+/* Multisite */
 define( 'WP_ALLOW_MULTISITE', true );
 define('MULTISITE', true);
 define('SUBDOMAIN_INSTALL', false);
@@ -86,6 +93,7 @@ define('DOMAIN_CURRENT_SITE', 'jordisabadell.com');
 define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
+
 
 /* That's all, stop editing! Happy publishing. */
 
