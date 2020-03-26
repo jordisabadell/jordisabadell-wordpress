@@ -19,7 +19,8 @@ This static web has been created from the following challenges.
 
 ## Wordpress plugins
 
-- Akismed (https://akismet.com/)
+- Akismed: By default. (https://wordpress.org/plugins/akismet/)
+- iTheme Security: It's on the top of WP security plugins. I use it since I started working with WP and it's fine and it's useful. A top one alternative is Securi WP plugin, but I tried it and I prefer iTheme user interface. Both have paid plans for multi-domain in WP multisite. (https://wordpress.org/plugins/better-wp-security/)
 
 
 ## Configuració entorn de treball
