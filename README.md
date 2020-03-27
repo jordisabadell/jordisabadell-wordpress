@@ -1,16 +1,14 @@
-# Jordi Sabadell Wordpress
-**A web of Jordi Sabadell Project** :rocket:  
+# Wordpress development environment configuration
+**A web of JS Project** :rocket:  
 https://www.jordisabadell.com
 
 ## Challanges
-This static web has been created from the following challenges.
+This repository has been created from the following challenges.
 
-- [x] Configure Wordpress/MySQL local environment with Docker.
-- [ ] Install multisite / multilanguage Wordpress (2 sites: Jordi Sabadell and Kilòmetre Solidari).
-- [ ] Install basic plugins (Akismet, Yoast, etc).
-- [ ] Install new theme for Jordi Sabadell Blog.
-- [ ] Create a Wordpress Custom Post Type and expose to JSON API.
-- [ ] Add Static Site Generator for WordPress for Serverless deploy.
+- [x] Configure Wordpress/MySQL local development environment with Docker.
+- [ ] Install multisite/multilanguage Wordpress.
+- [ ] Install basic plugins.
+- [ ] Create a Custom Post Type and Custom Fields.
 - [ ] Create a CI/CD environment (development-production life cycle).
 
 ## Architecture diagram
