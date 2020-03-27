@@ -46,6 +46,8 @@ Iniciar els contenidors
 docker-compose up -d
 ```
 
+Habiliar el volum del contenidor de Kitematic. Pestanya ***Volumes*** > Change Local Folder. Per exemple: docker-wordpress_1
+
 Seguir el procés d'instal·lació de Wordpress.  
 
 Actualitzar plugins. Si no permet executar l'actualització automàtica des del Backoffice de Wordpress, afegir la següent línia a l'arxiu de configuració (referència https://www.digitalocean.com/community/questions/how-to-fix-wordpress-connection-information-on-wp-that-is-running-in-a-docker-container)
