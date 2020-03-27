@@ -1,15 +1,7 @@
 /mysql-files
+/wordpress-files/.htaccess
 /wordpress-files/wp-admin
-/wordpress-files/wp-content/plugins/akismet
-/wordpress-files/wp-content/plugins/better-wp-security
-/wordpress-files/wp-content/plugins/advanced-custom-fields
-/wordpress-files/wp-content/plugins/custom-post-type-ui
-/wordpress-files/wp-content/plugins/hello.php
-/wordpress-files/wp-content/plugins/index.php
-/wordpress-files/wp-content/themes
-/wordpress-files/wp-content/upgrade
-/wordpress-files/wp-content/uploads
-/wordpress-files/wp-content/index.php
+/wordpress-files/wp-content
 /wordpress-files/wp-includes
 /wordpress-files/index.php
 /wordpress-files/license.txt
