@@ -30,14 +30,14 @@ This repository has been created from the following challenges.
 
 Crear directori
 ```
-mkdir jordisabadell-wordpress
-cd jordisabadell-wordpress
+mkdir jsproject-wordpress
+cd jsproject-wordpress
 ```
 
 Connectar amb el repositori de Github (inicialment buit, només amb la configuració de docker-compose.yml i l'arxiu .gitignore)
 ```
 git init
-git remote add origin https://github.com/jordisabadell/jordisabadell-wordpress
+git remote add origin https://github.com/jordisabadell/jsproject-wordpress
 git pull origin master
 ```
 
