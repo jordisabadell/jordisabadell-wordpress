@@ -26,22 +26,22 @@ define( 'DISALLOW_FILE_EDIT', true ); // Disable File Editor - Security > Settin
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', '${DB_NAME}' );
+define( 'DB_NAME', 'wordpress');
 
 /** MySQL database username */
-define( 'DB_USER', '${DB_USER}' );
+define( 'DB_USER', 'wordpress');
 
 /** MySQL database password */
-define( 'DB_PASSWORD', '${DB_PASSWORD}' );
+define( 'DB_PASSWORD', 'wordpress');
 
 /** MySQL hostname */
-define( 'DB_HOST', '${DB_HOST}' );
+define( 'DB_HOST', 'db:3306');
 
 /** Database Charset to use in creating database tables. */
-define( 'DB_CHARSET', 'utf8mb4' );
+define( 'DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', '' );
+define( 'DB_COLLATE', '');
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -52,14 +52,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'IkNc{er&*P!+f1%x5:uh]4SIoi;Klo!luc pbN>p!;_kuw=bh<C?>G/0NL=/7z?S' );
-define( 'SECURE_AUTH_KEY',  'zfx{)iG!+QamsgQ#{-cjar[5F1jYz+p.A`=0*{>8$vx59X=>D[IR(.5DlvY}]2Sl' );
-define( 'LOGGED_IN_KEY',    '}KSE6`{L]R[0nRAHn +z2V-7+D^PCns<DU)7y*.(!% tAR&2Pl6=:~zu1}696+hf' );
-define( 'NONCE_KEY',        '}i!pgkm#p.Tt@no.)isk;GoPQ(h/6y3ot)R6m:<4rDO1oB0Dc| L$+Y(;B]R:M;J' );
-define( 'AUTH_SALT',        'L-?IBPQ0P-7zP7$T!DE</JVd.i8q 51ISl([er*9%a4zw/~YOS]r8N(~8T(C>&so' );
-define( 'SECURE_AUTH_SALT', '9WC#_AL1FDFx``,^t6V*-_m@vcG3sV!l[&2!^G<pUZ12lAgfm,$|:;x;f:ou7(@:' );
-define( 'LOGGED_IN_SALT',   'qw!Mwz/P+~0d]DbaDb`~LBOHXC^v]t(PaKdYV`A8yGzZqJEC[>C:66Jso6Rr+W%-' );
-define( 'NONCE_SALT',       '2u ;PyL`27j<F?v!41Z#(5gP&nti$~Xp&gWNs^6hkC,pUs,A>C9SRux=94Z8^BbZ' );
+define( 'AUTH_KEY',         'd47e054468d74ffd4fb6ab53a157be1d558a4068');
+define( 'SECURE_AUTH_KEY',  'f89eb84c628875371553af4c2f8e0f151d464e9c');
+define( 'LOGGED_IN_KEY',    'ffe1ae77605944060b81ee44d574300f6617f92d');
+define( 'NONCE_KEY',        '95a239ece69a9b7bc599f4f96633e5c0ad3abdaa');
+define( 'AUTH_SALT',        'ce0d5acdc5e5c8b140b33a1e6f33e1bb48514561');
+define( 'SECURE_AUTH_SALT', '29ffe0f4ca0db3910c0871548e7a3d8320742038');
+define( 'LOGGED_IN_SALT',   '4bdb3b2e1a169f229441cb13d4c5d826890f180b');
+define( 'NONCE_SALT',       'adea4306b76362bec58a5653ddfacee7c372cb64');
 
 /**#@-*/
 
@@ -85,15 +85,19 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', false );
 
-/* Multisite */
+// If we're behind a proxy server and using HTTPS, we need to alert WordPress of that fact
+// see also http://codex.wordpress.org/Administration_Over_SSL#Using_a_Reverse_Proxy
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+	$_SERVER['HTTPS'] = 'on';
+}
+
 define( 'WP_ALLOW_MULTISITE', true );
 define('MULTISITE', true);
 define('SUBDOMAIN_INSTALL', false);
-define('DOMAIN_CURRENT_SITE', 'jordisabadell.com');
+define('DOMAIN_CURRENT_SITE', 'localhost');
 define('PATH_CURRENT_SITE', '/');
 define('SITE_ID_CURRENT_SITE', 1);
 define('BLOG_ID_CURRENT_SITE', 1);
-
 
 /* That's all, stop editing! Happy publishing. */
 

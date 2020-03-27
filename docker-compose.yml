@@ -5,8 +5,7 @@ services:
   db:
     image: mysql:5.7
     restart: always
-    volumes:
-      - dbdata:/var/lib/mysql
+    volumes: ["./mysql-files:/var/lib/mysql"]
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: wordpress
@@ -20,13 +19,11 @@ services:
       - db
     image: wordpress
     restart: always
-    volumes: ["./:/var/www/html/wp-content"]
+    volumes: ["./wordpress-files:/var/www/html"]
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_CONFIG_EXTRA: |
-        define('WP_ALLOW_MULTISITE', true );
     ports:
       - 80:80
       - 443:443
@@ -48,6 +45,3 @@ services:
 
 networks:
   wp:
-
-volumes:
-  dbdata:
