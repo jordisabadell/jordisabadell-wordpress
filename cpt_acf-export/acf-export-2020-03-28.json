@@ -1,0 +1,99 @@
+[
+    {
+        "key": "group_5e7eece83843e",
+        "title": "reflection_cf",
+        "fields": [
+            {
+                "key": "field_5e7ef08424dcc",
+                "label": "Title",
+                "name": "title",
+                "type": "text",
+                "instructions": "Title of reflection.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e7eecffa19e5",
+                "label": "Author",
+                "name": "author",
+                "type": "text",
+                "instructions": "Name of author.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": 100
+            },
+            {
+                "key": "field_5e7eed4aa19e6",
+                "label": "Publish date",
+                "name": "publish_date",
+                "type": "date_picker",
+                "instructions": "Publish's date of the reflection.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d\/m\/Y",
+                "return_format": "d\/m\/Y",
+                "first_day": 1
+            },
+            {
+                "key": "field_5e7eed9ea19e7",
+                "label": "Text plain",
+                "name": "text_plain",
+                "type": "textarea",
+                "instructions": "Text of reflection. Without HTML tags.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "reflection"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    }
+]

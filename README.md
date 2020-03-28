@@ -20,6 +20,7 @@ This repository has been created from the following challenges.
 - iTheme Security (https://wordpress.org/plugins/better-wp-security/)
 - Custom Post Type UI (https://wordpress.org/plugins/custom-post-type-ui/)
 - Advanced Custom Fields (https://wordpress.org/plugins/advanced-custom-fields/)
+- ACF to REST API (https://wordpress.org/plugins/acf-to-rest-api/)
 
 ## Wordpress tools
 - Post Type Generator (https://generatewp.com/post-type/)
@@ -46,32 +47,21 @@ Iniciar els contenidors
 docker-compose up -d
 ```
 
-Habiliar el volum del contenidor de Kitematic. Pestanya ***Volumes*** > Change Local Folder. Per exemple: docker-wordpress_1
-
 Seguir el procés d'instal·lació de Wordpress.  
 
 Actualitzar plugins. Si no permet executar l'actualització automàtica des del Backoffice de Wordpress, afegir la següent línia a l'arxiu de configuració (referència https://www.digitalocean.com/community/questions/how-to-fix-wordpress-connection-information-on-wp-that-is-running-in-a-docker-container)
 ```
-Editar fitxer wp-config.php
+Editar fitxer /wordpress-files/wp-config.php
     define('FS_METHOD','direct');
 ```
 
 Habilitar el Multisite  (referència https://gonzalonavarro.es/blog/wordpress-multisite/)
 ```
-- Editar fitxer wp-config.php
+- Editar fitxer /wordpress-files/wp-config.php
     define( 'WP_ALLOW_MULTISITE', true );
 
-- Activar el Multisite des de la Configuració de red del Backoffice.
-
-- Editar fitxer wp-config.php
-    define('MULTISITE', true);
-    define('SUBDOMAIN_INSTALL', false);
-    define('DOMAIN_CURRENT_SITE', 'localhost');
-    define('PATH_CURRENT_SITE', '/');
-    define('SITE_ID_CURRENT_SITE', 1);
-    define('BLOG_ID_CURRENT_SITE', 1);
-
-- Editar fitxer .htaccess
+- Activar el Multisite des de la Configuració de red del Backoffice
+- Editar fitxer /wordpress-files/.htaccess
     RewriteEngine On
     RewriteBase /
     RewriteRule ^index\.php$ - [L]
@@ -89,7 +79,11 @@ Habilitar el Multisite  (referència https://gonzalonavarro.es/blog/wordpress-mu
 
 Afegir un nou Site (opció Add New Site).  
 
-Afegir plugin iTheme Security. Configurar. A ***WordPress Tweaks*** modificar la configuració de la REST API a 'Default Access' perquè pugui rebre peticions de qualsvol orígen.
+Afegir plugins: 
+- iTheme Security
+- Custom Post Type UI
+- Advanced Custom Fields
+- ACF to REST API
 
 ---
 
@@ -97,8 +91,8 @@ Afegir plugin iTheme Security. Configurar. A ***WordPress Tweaks*** modificar la
 
 Referència https://www.wpbeginner.com/wp-tutorials/12-most-useful-wordpress-custom-post-types-tutorials/
 
-- Plugin *CTP UI* per facilitar la creació del CTP
-- Plugin *Advances Custom Fields* per crear els metaboxes
+- Plugin *CPT UI* per facilitar la creació del CPT (https://wordpress.org/plugins/custom-post-type-ui/). 
+- Plugin *Advances Custom Fields* per crear els metaboxes (https://wordpress.org/plugins/advanced-custom-fields/).
 
 ---
 
