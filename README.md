@@ -62,6 +62,7 @@ Habilitar el Multisite  (referència https://gonzalonavarro.es/blog/wordpress-mu
     define( 'WP_ALLOW_MULTISITE', true );
 
 - Activar el Multisite des de la Configuració de red del Backoffice.
+
 - Editar fitxer wp-config.php
     define('MULTISITE', true);
     define('SUBDOMAIN_INSTALL', false);
