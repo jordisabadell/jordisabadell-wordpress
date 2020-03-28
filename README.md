@@ -89,7 +89,7 @@ Habilitar el Multisite  (referència https://gonzalonavarro.es/blog/wordpress-mu
 
 Afegir un nou Site (opció Add New Site).  
 
-Afegir plugin iTheme Security (https://wordpress.org/plugins/better-wp-security/).
+Afegir plugin iTheme Security. Configurar. A ***WordPress Tweaks*** modificar la configuració de la REST API a 'Default Access' perquè pugui rebre peticions de qualsvol orígen.
 
 ---
 
@@ -97,8 +97,8 @@ Afegir plugin iTheme Security (https://wordpress.org/plugins/better-wp-security/
 
 Referència https://www.wpbeginner.com/wp-tutorials/12-most-useful-wordpress-custom-post-types-tutorials/
 
-- Plugin *CTP UI* per facilitar la creació del CTP (https://wordpress.org/plugins/custom-post-type-ui/). 
-- Plugin *Advances Custom Fields* per crear els metaboxes (https://wordpress.org/plugins/advanced-custom-fields/).
+- Plugin *CTP UI* per facilitar la creació del CTP
+- Plugin *Advances Custom Fields* per crear els metaboxes
 
 ---
 
