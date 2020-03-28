@@ -52,17 +52,25 @@ Seguir el procés d'instal·lació de Wordpress.
 
 Actualitzar plugins. Si no permet executar l'actualització automàtica des del Backoffice de Wordpress, afegir la següent línia a l'arxiu de configuració (referència https://www.digitalocean.com/community/questions/how-to-fix-wordpress-connection-information-on-wp-that-is-running-in-a-docker-container)
 ```
-Editar fitxer /wordpress-files/wp-config.php
+Editar fitxer wp-config.php
     define('FS_METHOD','direct');
 ```
 
 Habilitar el Multisite  (referència https://gonzalonavarro.es/blog/wordpress-multisite/)
 ```
-- Editar fitxer /wordpress-files/wp-config.php
+- Editar fitxer wp-config.php
     define( 'WP_ALLOW_MULTISITE', true );
 
-- Activar el Multisite des de la Configuració de red del Backoffice
-- Editar fitxer /wordpress-files/.htaccess
+- Activar el Multisite des de la Configuració de red del Backoffice.
+- Editar fitxer wp-config.php
+    define('MULTISITE', true);
+    define('SUBDOMAIN_INSTALL', false);
+    define('DOMAIN_CURRENT_SITE', 'localhost');
+    define('PATH_CURRENT_SITE', '/');
+    define('SITE_ID_CURRENT_SITE', 1);
+    define('BLOG_ID_CURRENT_SITE', 1);
+
+- Editar fitxer .htaccess
     RewriteEngine On
     RewriteBase /
     RewriteRule ^index\.php$ - [L]
