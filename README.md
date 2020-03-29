@@ -7,8 +7,8 @@ This repository has been created from the following challenges.
 
 - [x] Configure Wordpress/MySQL local development environment with Docker.
 - [x] Enable multisite.
-- [ ] Install multilingual plugin.
-- [ ] Enable a Custom Post Type and Custom Fields multisite/multilingual functions.
+- [x] Install multilingual plugin.
+- [x] Configure a Custom Post Type and Custom Fields functions.
 - [x] Read BBDD content through the REST API.
 - [ ] Create a CI/CD environment (development-production life cycle).
 
