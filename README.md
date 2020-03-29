@@ -6,9 +6,10 @@ https://www.jordisabadell.com
 This repository has been created from the following challenges.
 
 - [x] Configure Wordpress/MySQL local development environment with Docker.
-- [ ] Install multisite/multilanguage Wordpress.
-- [ ] Install basic plugins.
-- [ ] Create a Custom Post Type and Custom Fields.
+- [x] Enable multisite.
+- [ ] Install multilingual plugin.
+- [ ] Enable a Custom Post Type and Custom Fields multisite/multilingual functions.
+- [x] Read BBDD content through the REST API.
 - [ ] Create a CI/CD environment (development-production life cycle).
 
 ## Architecture diagram
@@ -21,6 +22,7 @@ This repository has been created from the following challenges.
 - Custom Post Type UI (https://wordpress.org/plugins/custom-post-type-ui/)
 - Advanced Custom Fields (https://wordpress.org/plugins/advanced-custom-fields/)
 - ACF to REST API (https://wordpress.org/plugins/acf-to-rest-api/)
+- Polylang (https://wordpress.org/plugins/polylang/)
 
 ## Wordpress tools
 - Post Type Generator (https://generatewp.com/post-type/)
@@ -87,12 +89,27 @@ Afegir plugins:
 
 ---
 
-## Crear estructura personalitzada
+## Crear estructura personalitzada amb camps propis
 
-Referència https://www.wpbeginner.com/wp-tutorials/12-most-useful-wordpress-custom-post-types-tutorials/
+Per crear una estructura personalitzada (tipus 'Noticia') amb camps propis (tipus Títol, Data de publicació, Autor, Tema, etcètera), cal tenir instal·lats els següents plugins:
 
-- Plugin *CPT UI* per facilitar la creació del CPT (https://wordpress.org/plugins/custom-post-type-ui/). 
-- Plugin *Advances Custom Fields* per crear els metaboxes (https://wordpress.org/plugins/advanced-custom-fields/).
+- Custom Post Types UI (CPT UI)
+- Advances Custom Fields (ACF)
+
+Important recordar exportar la configuració de l'estructura i dels camps propis per poder sincronitzar entre entorns.
+
+Referències utilitzades:
+- https://www.wpbeginner.com/wp-tutorials/12-most-useful-wordpress-custom-post-types-tutorials/
+- https://www.advancedcustomfields.com/resources/displaying-custom-field-values-in-your-theme/
+
+---
+
+### Configurar multi-idioma
+
+- Plugin *Polylang* per habilitar el multi-idioma.
+- Configurar idioma per defecte (permet assignar els continguts actuals a aquest idioma). Crear un segon idioma. 
+- Habilitar l'idioma pels CPT (https://polylang.pro/doc/multilingual-custom-post-types-and-taxonomies/). En aquest cas, no permet assignar els continguts actuals a l'idioma per defecte; s'ha de fer 1 a 1 editant el contingut i publicant-lo de nou. ¿¿¿???
+- Recuperar a través de la REST API les versions en un únic idioma. "The feature is available only in Polylang Pro" (https://polylang.pro/doc/rest-api/). ¿¿¿???
 
 ---
 
