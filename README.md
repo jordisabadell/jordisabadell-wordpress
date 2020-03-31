@@ -107,6 +107,7 @@ Referències utilitzades:
 ### Configurar multi-idioma
 
 - Plugin *Polylang* per habilitar el multi-idioma.
+- *Important!* Assignar l'idioma per defecte a tots els sites. En cas contrari retornarà un 404.
 - Configurar idioma per defecte (permet assignar els continguts actuals a aquest idioma). Crear un segon idioma. 
 - Habilitar l'idioma pels CPT (https://polylang.pro/doc/multilingual-custom-post-types-and-taxonomies/). En aquest cas, no permet assignar els continguts actuals a l'idioma per defecte; s'ha de fer 1 a 1 editant el contingut i publicant-lo de nou. ¿¿¿???
 - Recuperar a través de la REST API les versions en un únic idioma. "The feature is available only in Polylang Pro" (https://polylang.pro/doc/rest-api/). ¿¿¿???
