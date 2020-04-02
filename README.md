@@ -5,12 +5,11 @@ https://www.jordisabadell.com
 ## Challanges
 This repository has been created from the following challenges.
 
-- [x] Configure Wordpress/MySQL local development environment with Docker.
-- [x] Enable multisite.
-- [x] Install multilingual plugin.
-- [x] Configure a Custom Post Type and Custom Fields functions.
-- [x] Read BBDD content through the REST API.
-- [ ] Create a CI/CD environment (development-production life cycle).
+- [x] Configure local WordPress development environment using Docker.
+- [x] Enable multisite and multilingual.
+- [x] Expose REST API.
+- [x] Add security WordPress plugin.
+- [ ] Create a CI/CD environment (development-production life cycle)
 
 ## Architecture diagram
 
@@ -19,13 +18,7 @@ This repository has been created from the following challenges.
 ## Wordpress plugins
 - Akismed (https://wordpress.org/plugins/akismet/)
 - iTheme Security (https://wordpress.org/plugins/better-wp-security/)
-- Custom Post Type UI (https://wordpress.org/plugins/custom-post-type-ui/)
-- Advanced Custom Fields (https://wordpress.org/plugins/advanced-custom-fields/)
-- ACF to REST API (https://wordpress.org/plugins/acf-to-rest-api/)
 - Polylang (https://wordpress.org/plugins/polylang/)
-
-## Wordpress tools
-- Post Type Generator (https://generatewp.com/post-type/)
 
 ---
 
@@ -81,26 +74,7 @@ Habilitar el Multisite  (referència https://gonzalonavarro.es/blog/wordpress-mu
 
 Afegir un nou Site (opció Add New Site).  
 
-Afegir plugins: 
-- iTheme Security
-- Custom Post Type UI
-- Advanced Custom Fields
-- ACF to REST API
-
----
-
-## Crear estructura personalitzada amb camps propis
-
-Per crear una estructura personalitzada (tipus 'Noticia') amb camps propis (tipus Títol, Data de publicació, Autor, Tema, etcètera), cal tenir instal·lats els següents plugins:
-
-- Custom Post Types UI (CPT UI)
-- Advances Custom Fields (ACF)
-
-Important recordar exportar la configuració de l'estructura i dels camps propis per poder sincronitzar entre entorns.
-
-Referències utilitzades:
-- https://www.wpbeginner.com/wp-tutorials/12-most-useful-wordpress-custom-post-types-tutorials/
-- https://www.advancedcustomfields.com/resources/displaying-custom-field-values-in-your-theme/
+Afegir plugin iTheme Security.
 
 ---
 
