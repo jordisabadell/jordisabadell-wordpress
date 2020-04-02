@@ -1,5 +1,5 @@
 # Wordpress development environment configuration
-**A web of JS Project** :rocket:  
+**JS Project** :rocket:  
 https://www.jordisabadell.com
 
 ## Challanges
