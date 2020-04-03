@@ -1,5 +1,5 @@
 # Wordpress development environment configuration
-**JS Project** :rocket:  
+**A reporitory of JS Project** :rocket:  
 https://www.jordisabadell.com
 
 ## Challanges
@@ -15,105 +15,115 @@ This repository has been created from the following challenges.
 
 ![Image description](docs/architecture-diagram.png)
 
-## Wordpress plugins
+## Installed Wordpress plugins
 - Akismed (https://wordpress.org/plugins/akismet/)
 - iTheme Security (https://wordpress.org/plugins/better-wp-security/)
 - Polylang (https://wordpress.org/plugins/polylang/)
 
 ---
 
-## Passos configuració entorn local
+## Steps to configure development environment
 
-Crear directori
+### Docker
+
+Create an empty folder.
 ```
 mkdir jsproject-wordpress
 cd jsproject-wordpress
 ```
 
-Connectar amb el repositori de Github (inicialment buit, només amb la configuració de docker-compose.yml i l'arxiu .gitignore)
+Connect to Github repository.
 ```
 git init
-git remote add origin https://github.com/jordisabadell/jsproject-wordpress
+git remote add origin https://github.com/jordisabadell/jsproject-wp-environment
 git pull origin master
 ```
 
-Iniciar els contenidors
+Build containers.
 ```
 docker-compose up -d
 ```
 
-Seguir el procés d'instal·lació de Wordpress.  
+### Install Wordpress and update plugins
 
-Actualitzar plugins. Si no permet executar l'actualització automàtica des del Backoffice de Wordpress, afegir la següent línia a l'arxiu de configuració (referència https://www.digitalocean.com/community/questions/how-to-fix-wordpress-connection-information-on-wp-that-is-running-in-a-docker-container)
+Access to Wordpress and follow wizard installation.  
+
+After that, if you can't update (or install) plugins you must enable filesystem method adding the following line to the end of the file */wordpress-files/wp-config.php* (reference https://www.digitalocean.com/community/questions/how-to-fix-wordpress-connection-information-on-wp-that-is-running-in-a-docker-container):
 ```
-Editar fitxer /wordpress-files/wp-config.php
-    define('FS_METHOD','direct');
-```
-
-Habilitar el Multisite  (referència https://gonzalonavarro.es/blog/wordpress-multisite/)
-```
-- Editar fitxer /wordpress-files/wp-config.php
-    define( 'WP_ALLOW_MULTISITE', true );
-
-- Activar el Multisite des de la Configuració de red del Backoffice
-- Editar fitxer /wordpress-files/.htaccess
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^index\.php$ - [L]
-
-    # add a trailing slash to /wp-admin
-    RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
-
-    RewriteCond %{REQUEST_FILENAME} -f [OR]
-    RewriteCond %{REQUEST_FILENAME} -d
-    RewriteRule ^ - [L]
-    RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
-    RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
-    RewriteRule . index.php [L]
+define('FS_METHOD','direct');
 ```
 
-Afegir un nou Site (opció Add New Site).  
+Install iTheme Security plugin.
 
-Afegir plugin iTheme Security.
+### Multisite
+
+Enable Wordpress multisite (reference https://gonzalonavarro.es/blog/wordpress-multisite/).
+
+1) Add the following line to the end of the file */wordpress-files/wp-config.php*
+```
+define( 'WP_ALLOW_MULTISITE', true );
+````
+
+2) Access to Newtwork configuration from Backoffice, and enable it.  
+
+3) Replace file */wordpress-files/.htaccess*
+```
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+
+#add a trailing slash to /wp-admin
+RewriteRule ^([_0-9a-zA-Z-]+/)?wp-admin$ $1wp-admin/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(wp-(content|admin|includes).*) $2 [L]
+RewriteRule ^([_0-9a-zA-Z-]+/)?(.*\.php)$ $2 [L]
+RewriteRule . index.php [L]
+```
+
+4) Add New Site from Backoffice menu.
+
+
+### Multilingual
+
+Install Polylang plugin.  
+
+**Important!** You must define a default lang for each site. Otherwise it returns a 404 error.  
+
+Enable lang to CPT contents (https://polylang.pro/doc/multilingual-custom-post-types-and-taxonomies/). In this case, Polylang doesn't let you to define a lang to CTP content. You must define every content manually and republish.  
+
+**Important!** Get multilingual contents using Polylang and default WordPress REST API is not available. The feature is available only in Polylang Pro. (https://polylang.pro/doc/rest-api/).
 
 ---
 
-### Configurar multi-idioma
+## Docker basic commands
+Use **Poweshell** command line.
 
-- Plugin *Polylang* per habilitar el multi-idioma.
-- *Important!* Assignar l'idioma per defecte a tots els sites. En cas contrari retornarà un 404.
-- Configurar idioma per defecte (permet assignar els continguts actuals a aquest idioma). Crear un segon idioma. 
-- Habilitar l'idioma pels CPT (https://polylang.pro/doc/multilingual-custom-post-types-and-taxonomies/). En aquest cas, no permet assignar els continguts actuals a l'idioma per defecte; s'ha de fer 1 a 1 editant el contingut i publicant-lo de nou. ¿¿¿???
-- Recuperar a través de la REST API les versions en un únic idioma. "The feature is available only in Polylang Pro" (https://polylang.pro/doc/rest-api/). ¿¿¿???
-
----
-
-## Comandes bàsiques Docker 
-Per executar les comandes en entorn Window usar **PowerShell**.
-
-Veure les imatges.
+View images.
 ```
 docker images -a
 ```
 
-Eliminar una imatge/totes les imatges.
+Remove an image/all images.
 ```
 docker rmi -f {IMAGE ID}
 docker rmi -f $(docker images -a -q)
 ```
 
-Veure els contenidors.
+View containers.
 ```
 docker ps -a
 ```
 
-Eliminar un contenidor/tots els contenidors.
+Remove a container/all containers.
 ```
 docker container rm {CONTAINER ID}
 docker rm -vf $(docker ps -a -q)
 ```
 
-Parar contenidors.
+Stop containers execution.
 ```
 docker-compose stop
 ```
