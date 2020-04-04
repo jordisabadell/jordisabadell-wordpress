@@ -2,7 +2,7 @@
 **A reporitory of JS Project** :rocket:  
 https://www.jordisabadell.com
 
-## Challanges
+## Challenges
 This repository has been created from the following challenges.
 
 - [x] Configure local WordPress development environment using Docker.
